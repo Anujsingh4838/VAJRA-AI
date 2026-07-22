@@ -1,0 +1,111 @@
+.payment-form-card{
+
+background:#111f38;
+
+border:1px solid #223453;
+
+border-radius:20px;
+
+padding:32px;
+
+}
+
+.payment-form-card h2{
+
+font-size:34px;
+
+margin-bottom:10px;
+
+}
+
+.payment-form-card p{
+
+color:#94a3b8;
+
+margin-bottom:30px;
+
+}
+
+.form-group{
+
+display:flex;
+
+flex-direction:column;
+
+margin-bottom:22px;
+
+}
+
+.form-group label{
+
+margin-bottom:8px;
+
+font-size:15px;
+
+font-weight:600;
+
+}
+
+.form-group input,
+
+.form-group select{
+
+height:54px;
+
+padding:0 16px;
+
+background:#0c172c;
+
+border:1px solid #223453;
+
+border-radius:12px;
+
+color:white;
+
+font-size:15px;
+
+outline:none;
+
+transition:.3s;
+
+}
+
+.form-group input:focus,
+
+.form-group select:focus{
+
+border-color:#2563eb;
+
+box-shadow:0 0 12px rgba(37,99,235,.3);
+
+}
+.analyze-btn {
+  width: 100%;
+  height: 62px;
+  border: none;
+  border-radius: 16px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 800;
+  color: white;
+  letter-spacing: 0.3px;
+  background: linear-gradient(90deg, #6d28d9, #2563eb, #06b6d4);
+  box-shadow: 0 10px 30px rgba(37, 99, 235, 0.35);
+  transition: all 0.3s ease;
+}
+
+.analyze-btn:hover {
+  transform: translateY(-3px) scale(1.01);
+  box-shadow: 0 15px 38px rgba(59, 130, 246, 0.55);
+}
+
+.analyze-btn:active {
+  transform: translateY(0) scale(0.99);
+}
+
+.analyze-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
