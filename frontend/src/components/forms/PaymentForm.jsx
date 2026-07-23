@@ -43,37 +43,23 @@ function PaymentForm({ onResult }) {
       onResult(response.data, formData);
 
     } catch (error) {
+  console.log("========== ERROR ==========");
+  console.log(error);
 
-      console.error("Prediction Error:", error);
+  if (error.response) {
+    console.log("STATUS:", error.response.status);
+    console.log("DATA:", error.response.data);
+    alert(JSON.stringify(error.response.data));
+  } else if (error.request) {
+    console.log("REQUEST:", error.request);
+    alert("No response from backend");
+  } else {
+    console.log("MESSAGE:", error.message);
+    alert(error.message);
+  }
+}
 
-      if (error.response) {
-
-        console.log("Status:", error.response.status);
-        console.log("Response:", error.response.data);
-
-        alert(
-          `Backend Error (${error.response.status})\n${JSON.stringify(
-            error.response.data,
-            null,
-            2
-          )}`
-        );
-
-      } else if (error.request) {
-
-        console.log("No response received:", error.request);
-
-        alert("Unable to connect to VAJRA API.");
-
-      } else {
-
-        console.log(error.message);
-
-        alert(error.message);
-
-      }
-
-    } finally {
+    finally {
 
       setLoading(false);
 
@@ -116,7 +102,6 @@ function PaymentForm({ onResult }) {
             <option>Money Transfer</option>
             <option>Bill Payment</option>
             <option>Subscription</option>
-            <option>ATM Withdrawal</option>
           </select>
         </div>
 
