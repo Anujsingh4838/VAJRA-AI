@@ -1,6 +1,6 @@
-backend/models/random_forest.pkl
+#backend/models/random_forest.pkl
 backend/random_forest.pkl
 __pycache__/
 *.pyc
-backend/models/random_forest.pkl
+#backend/models/random_forest.pkl
 backend/random_forest_model.pkl
